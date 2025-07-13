@@ -1,0 +1,47 @@
+<form action="" method="post" <?php 
+
+if($akcija!='Dodaj'){
+    echo 'enctype="multipart/form-data"';
+}
+
+?>>
+    <fieldset class="fieldset">
+        <legend><?=$legend?></legend>
+
+        <?php 
+        echo App::inputText('ime',$e->ime);
+        echo App::inputText('prezime',$e->prezime);
+        echo App::inputText('email',$e->email);
+        echo App::inputText('oib',$e->oib);
+        echo App::inputText('iban',$e->iban);
+        ?>
+
+<?php 
+
+if($akcija!='Dodaj'):
+    ?>
+  <label for="slika">Slika</label>
+        <input type="file" name="slika" id="slika">
+<img src="<?=$e->slika?>" />
+    <?php
+endif;
+?>
+      
+        <hr>
+        <?=$poruka?>
+
+        <div class="grid-x grid-padding-x">
+            <div class="large-6 cell">
+                <a href="<?=App::config('url')?>predavac/index"
+                class="button alert expanded">Odustani</a>
+            </div>
+            <div class="large-6 cell">
+                <input type="submit" class="button success expanded" 
+                value="<?=$akcija?>">
+            </div>
+        </div>
+        
+        
+
+    </fieldset>
+</form>

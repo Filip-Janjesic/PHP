@@ -1,0 +1,28 @@
+<div class="popispolaznika">
+<input type="text" id="uvjet" placeholder="Traži polaznika">    
+<div style="min-height: 20px;">
+<div style="font-size: 0.6rem;" id="poruka"></div>
+</div>
+<table>
+        <thead>
+            <tr>
+                <th>Ime i prezime</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody id="podaci">
+            <?php foreach($e->polaznici as $p): ?>
+            <tr>
+                <td>
+                    <?=$p->imeprezime?>
+                </td>
+                <td>
+                    <a href="#" class="odabraniPolaznik" id="p_<?=$p->sifra?>">
+                    <i class="fi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

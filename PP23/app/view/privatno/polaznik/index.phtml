@@ -1,0 +1,52 @@
+<a href="<?=App::config('url')?>polaznik/detalji" 
+class="success button expanded">Novi polaznik</a>
+<form method="GET" 
+action="<?=App::config('url')?>polaznik/index">
+    <input type="text" name="uvjet" placeholder="ime, prezime ili OIB"
+    value="<?=$uvjet?>">
+</form>
+<?php include 'stranicenje.phtml' ?>
+<div class="grid-x grid-padding-x">
+    <?php foreach($polaznici as $polaznik):?>
+
+        <div class="large-3 medium-6 cell">
+            <div class="callout" style="text-align: center;">
+                <img class="slika" id="p_<?=$polaznik->sifra?>" src="<?=$polaznik->slika?>" 
+                alt="<?=$polaznik->ime?> <?=$polaznik->prezime?>">
+                <h1 class="naslovPredavac">
+                    <?=$polaznik->ime?> <?=$polaznik->prezime?>
+                </h1>
+                <div class="success callout">
+                    <a href="<?=App::config('url')?>polaznik/detalji/<?=$polaznik->sifra?>">
+                            <i title="Promjena" class="fas fa-2x fa-pencil-alt"></i>
+                        </a>
+                        <?php if($polaznik->grupa==0): ?>
+                        <a 
+                        onclick="return confirm('Sigurno obrisati polaznika &#34;<?=$polaznik->ime?> <?=$polaznik->prezime?>&#34;?');"
+                        href="<?=App::config('url')?>polaznik/brisanje/<?=$polaznik->sifra?>">
+                            <i title="Brisanje" style="color: red; margin-left: 20px;" class="fas fa-2x fa-trash-alt"></i>
+                        </a>
+                        <?php else:?>
+                            <i title="Ne može se obrisati jer sudjeluje na grupama(<?=$polaznik->grupa?>)" style="color: gray; margin-left: 20px;" class="fas fa-2x fa-trash-alt"></i>
+                        <?php endif;?>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    <?php endforeach;?>
+    <?php include 'stranicenje.phtml' ?>
+</div>
+
+<div class="reveal" id="slikaModal" data-reveal>
+    <div style="max-height: 300px; overflow: auto;">
+        <img id="image" src="" alt="" />
+    </div>
+  
+  <input type="file" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+  <a href="#" id="spremi">Spremi</a>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

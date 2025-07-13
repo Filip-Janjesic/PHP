@@ -1,0 +1,12 @@
+<div class="<?php echo App::config('dev') ? 'alert ' : ''; ?>callout">
+&copy; Edunova
+<?php $godina = date('Y');
+if($godina!='2021'){
+    ?>
+ 2021 - <?php echo $godina; ?> 
+    <?php
+}else{
+    echo '2021';
+}
+?><?php echo App::config('dev') ? ', last git hash ' . EdunovaUtil::verzija() : '';?>
+</div>

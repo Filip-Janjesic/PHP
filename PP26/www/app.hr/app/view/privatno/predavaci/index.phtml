@@ -1,0 +1,21 @@
+<a href="<?=App::config('url')?>predavac/novi" 
+class="success button expanded">
+    Dodaj novog predavača
+</a>
+
+<div class="grid-x grid-padding-x">
+    <?php foreach($podaci as $red): ?>
+        <div class="large-3 medium-6 small-12 cell">
+            <div class="callout">
+                <img src="<?=$red->slika?>" 
+                alt="<?=$red->ime?> <?=$red->prezime?>">
+
+                <p><?=$red->ime?> <?=$red->prezime?></h1><hr>
+                <?php
+                $par=['predavac', $red->ime . ' ' . $red->prezime, $red->grupa==0];
+                include BP_APP . 'view/includes/promjenabrisanje.phtml';
+                ?>
+            </div>
+        </div>
+    <?php endforeach;?>
+</div>

@@ -1,0 +1,17 @@
+# Prvo uključiti URL rewrite
+RewriteEngine On
+
+# ako želite uvjek forsirati https odkomentirati sljedeće dvije linije
+#RewriteCond %{HTTPS} off 
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# preskoči ako datoteka postoji
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# preskoči ako je direktorij
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# sve ostale upite vodi na index.php
+RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]
+

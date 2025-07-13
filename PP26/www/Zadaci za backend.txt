@@ -1,0 +1,7 @@
+https://projecteuler.net/
+https://adventofcode.com/
+Zanemariti C, koristiit ulaz i izlaz za provjeru
+https://www.w3resource.com/c-programming-exercises/
+
+Čitati u slobodno vrijeme
+https://www.php.net/manual/en/indexes.functions.php

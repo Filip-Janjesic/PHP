@@ -1,0 +1,8 @@
+Tko želi, nije obavezno
+
+1. Zakupiti VPS (https://www.digitalocean.com/, https://contabo.com/)
+2. Zakupiti domenu (https://www.europeregistry.com/)
+3. Spojiti VPS i domenu
+4. Instalirati (L)AMP https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04
+
+

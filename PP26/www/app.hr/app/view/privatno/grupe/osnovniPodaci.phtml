@@ -1,0 +1,50 @@
+
+<label 
+        <?php if(isset($poruke['naziv'])): ?>
+            class="is-invalid-label greska" 
+        <?php endif; ?>
+        for="naziv">Naziv</label>
+        <input 
+        <?php if(isset($poruke['naziv'])): ?>
+            class="is-invalid-input"
+        <?php endif; ?>
+         type="text" id="naziv" name="naziv"
+        value="<?=$e->naziv?>">
+
+        <?php if(isset($poruke['naziv'])): ?>
+            <span class="form-error is-visible">
+            <?=$poruke['naziv'] ?>
+        </span>
+        <?php endif; ?>
+        <div class="callout">
+            <label for="smjer">Smjer</label>
+            <input type="text" id="uvjetsmjer" placeholder="Traži smjer">  
+            <input type="hidden" name="smjer" id="smjer" value="<?=$smjer->sifra?>">
+            <div id="smjerNaziv">
+            <?=$smjer->naziv?>
+            </div>  
+        </div>
+   
+
+
+
+    <label for="predavac">Predavač</label>
+    <select name="predavac" id="predavac">
+        <?php foreach($predavaci as $predavac): ?>
+            <option 
+            <?php if($predavac->sifra==$e->predavac){
+                echo ' selected="selected" ';
+            } ?>
+            value="<?=$predavac->sifra?>">
+                <?=$predavac->ime?> <?=$predavac->prezime?>
+            </option>
+        <?php endforeach;?>
+    </select>
+
+
+    <label for="datumpocetka">Datum početka</label>
+    <input type="date" name="datumpocetka" id="datumpocetka"
+    value="<?=$e->datumpocetka?>">
+
+    <?php echo App::inputText('maksimalnopolaznika',$e->maksimalnopolaznika); ?>
+

@@ -1,0 +1,30 @@
+tbody > tr > td:not(:first-child,:last-child,:nth-child(5)){
+    text-align: right;
+}
+
+tbody > tr > td:nth-child(5){
+    text-align: center;
+}
+
+thead > tr > th{
+    font-weight: normal;
+}
+
+tbody > tr > td:first-child{
+font-weight: bold;
+}
+
+.success.button.expanded{
+    margin-top: 10px;
+}
+
+.fi-check{
+    font-size: 25px;
+    color: green
+}
+
+.fi-x{
+    font-size: 25px;
+    color: red
+}
+

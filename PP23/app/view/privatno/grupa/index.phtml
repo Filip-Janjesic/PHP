@@ -1,0 +1,46 @@
+<a href="<?=App::config('url')?>grupa/nova" 
+class="success button expanded">Nova grupa</a>
+<table>
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Smjer</th>
+            <th>Predavač</th>
+            <th>Datum početka</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($grupe as $grupa): ?>
+            <tr>
+                <td><?=$grupa->naziv?></td>
+                <td><?=$grupa->smjer?></td>
+                <td><?=$grupa->predavac?></td>
+                <td>
+                    <?=$grupa->datumpocetka==null ? '' : date('d. m. Y.', strtotime($grupa->datumpocetka))?>
+                </td>
+                <td>
+                    <a href="<?=App::config('url')?>grupa/detalji/<?=$grupa->sifra?>">
+                        <i title="Promjena" class="fas fa-2x fa-pencil-alt"></i>
+                    </a>
+                    <?php if($grupa->clanova==0): ?>
+                    <a 
+                    onclick="return confirm('Sigurno obrisati grupu &#34;<?=$grupa->naziv?>&#34;?');"
+                    href="<?=App::config('url')?>grupa/brisanje?sifra=<?=$grupa->sifra?>">
+                        <i title="Brisanje" style="color: red; margin-left: 20px;" class="fas fa-2x fa-trash-alt"></i>
+                    </a>
+                    <?php else:?>
+                        <i title="Ne može se obrisati jer ima članove(<?=$grupa->clanova?>)" style="color: gray; margin-left: 20px;" class="fas fa-2x fa-trash-alt"></i>
+                    <?php endif;?>
+                    <a target="_blank" href="<?=App::config('url')?>grupa/pdf/<?=$grupa->sifra?>">
+                    <i style="margin-left: 20px;" class="fas fa-2x fa-file-pdf"></i>
+                    </a>
+
+                    <a target="_blank" href="<?=App::config('url')?>grupa/excel/<?=$grupa->sifra?>">
+                    <i style="margin-left: 20px;" class="fas fa-2x fa-file-excel"></i>
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach;?>
+    </tbody>
+</table>
