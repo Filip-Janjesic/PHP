@@ -1,0 +1,41 @@
+*{
+  margin:auto;
+  max-width: 1200px;
+
+}
+.space{
+  height: 80px;
+}
+
+.category{
+  border-style: double;
+}
+
+.f-dropdown1 {
+  outline: none;
+}
+
+.custom-button{
+  border-radius: 8px;
+}
+.checked {
+  color: orange;
+}
+
+.custom-p
+{
+    display:inline;
+}
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.max-width-700{
+
+  max-width: 700px;
+  margin:auto;
+
+}
