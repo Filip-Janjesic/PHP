@@ -1,0 +1,135 @@
+*{
+   margin:auto;
+   max-width: 1200px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: grey;
+  padding: 10px;
+  flex: 50%;
+}
+input[type=text], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.custom-form{
+   width: 20%;
+   border-radius: 10px;
+}
+
+
+ .td-no-back{
+  background-color: white;
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.td-left-right{
+  background-image: url('left-right.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+.td-up-down{
+  background-image: url('up-down.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.td-left-down{
+  background-image: url('left-down.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.td-left-up{
+  background-image: url('left-up.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.td-right-down{
+  background-image: url('right-down.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.td-right-up{
+  background-image: url('right-up.png');
+  border: 1px solid black;
+  min-width: 70px;
+  min-height: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
+
+
