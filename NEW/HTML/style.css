@@ -1,16 +1,13 @@
 .red {
-    color: red;
+  color: red;
 }
-
 .font_bold {
-    font-weight: bold;
+  font-weight: bold;
 }
-
-.green{
-    color: green;
+.green {
+  color: green;
 }
-
 .green_bold {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
 }
