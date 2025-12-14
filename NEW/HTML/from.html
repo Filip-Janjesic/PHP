@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forms in HTML</title>
+    <style>
+      form {
+        width: 50%;
+        background-color: burlywood;
+        padding: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      label {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="date"] {
+        width: 400px;
+        height: 25px;
+        padding: 5px;
+      }
+      textarea {
+        width: 400px;
+        height: 200px;
+        padding: 5px;
+      }
+      button[type="submit"] {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Froms in HTML Web Page</h2>
+
+    <!-- Form -->
+
+    <form method="post" action="process.php">
+      <p>
+        <label>Student Name</label>
+        <input type="text" name="student_name" required />
+      </p>
+      <p>
+        <label>Student Email Address</label>
+        <input type="email" name="student_email" required />
+      </p>
+
+      <p>
+        <label>Student Phone</label>
+        <input type="number" name="student_phone" required />
+      </p>
+
+      <p>
+        <label>DOB</label>
+        <input type="date" name="dob" required />
+      </p>
+
+      <p>
+        <label>Student Address</label>
+        <textarea name="student_address"></textarea>
+      </p>
+
+      <p>
+        <label>Gender</label>
+        <input type="radio" name="gender" /><label>Male</label>
+        <input type="radio" name="gender" /><label>FeMale</label>
+      </p>
+
+      <p>
+        <label>Hobbies</label>
+        <input type="checkbox" name="hobbies" /><label>Playing Football</label>
+        <input type="checkbox" name="hobbies" /><label>Reading</label>
+        <input type="checkbox" name="hobbies" /><label>Music</label>
+        <input type="checkbox" name="hobbies" /><label>Others</label>
+      </p>
+
+      <!-- File Upload input-->
+      <p>
+        <label>File Upload</label>
+        <input type="file" name="student_image" />
+      </p>
+
+      <!-- Submit Button -->
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
