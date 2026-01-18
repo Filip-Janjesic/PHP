@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS - Form</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                box-sizing: border-box;
+                background-color: aqua;
+                background-image: url("bg-image.jpg");
+                background-size: cover;
+            }
+            .container {
+                display: flex;
+                max-width: 400px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: aquamarine;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                margin-bottom: 10px;
+            }
+            input[type="submit"] {
+                background: black;
+                color: white;
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                border-radius: 10px;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: blueviolet;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form>
+                <input type="text" name="name" placeholder="Enter Name" />
+                <input type="email"  name="email" placeholder="Enter Email" />
+                <input type="text" name="phone" placeholder="Enter Phone" />
+                <input type="password"  name="password" placeholder="Enter Password" />
+                <input type="submit"  name="Registration" value="Register" />
+            </form>
+        </div>
+    </body>
+</html>
